@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Personal Budget Tracker</h1>
+
+    <!-- Balance Summary -->
+    <div class="summary">
+      <h2>Balance Summary</h2>
+      <p>Total Income: $<span id="totalIncome">0</span></p>
+      <p>Total Expenses: $<span id="totalExpenses">0</span></p>
+      <p>Balance: $<span id="balance">0</span></p>
+    </div>
+
+    <!-- Add Income -->
+    <div class="transaction">
+      <h3>Add Income</h3>
+      <input type="text" id="incomeDescription" placeholder="Description">
+      <input type="number" id="incomeAmount" placeholder="Amount">
+      <button onclick="addIncome()">Add Income</button>
+    </div>
+
+    <!-- Add Expense -->
+    <div class="transaction">
+      <h3>Add Expense</h3>
+      <input type="text" id="expenseDescription" placeholder="Description">
+      <input type="number" id="expenseAmount" placeholder="Amount">
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <!-- Transaction History -->
+    <div class="history">
+      <h2>Transaction History</h2>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
